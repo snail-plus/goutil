@@ -3,8 +3,8 @@ package optional_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/dump"
-	"github.com/gookit/goutil/stdutil/optional"
+	"github.com/snail-plus/goutil/dump"
+	"github.com/snail-plus/goutil/stdutil/optional"
 )
 
 func TestOptFactory_of(t *testing.T) {

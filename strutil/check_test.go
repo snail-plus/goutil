@@ -3,7 +3,7 @@ package strutil_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/strutil"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -123,4 +123,3 @@ func TestHasAllSubs(t *testing.T) {
 	assert.False(t, strutil.HasAllSubs("h3ab2c", []string{"a", "d"}))
 	assert.True(t, strutil.HasAllSubs("h3ab2c", []string{"a", "b"}))
 }
-

@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gookit/goutil/envutil"
-	"github.com/gookit/goutil/fsutil"
+	"github.com/snail-plus/goutil/envutil"
+	"github.com/snail-plus/goutil/fsutil"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gookit/goutil/mathutil"
+	"github.com/snail-plus/goutil/mathutil"
 )
 
 // global id:

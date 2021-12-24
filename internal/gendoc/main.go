@@ -12,10 +12,10 @@ import (
 	"strings"
 
 	"github.com/gookit/color"
-	"github.com/gookit/goutil"
-	"github.com/gookit/goutil/arrutil"
-	"github.com/gookit/goutil/fsutil"
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil"
+	"github.com/snail-plus/goutil/arrutil"
+	"github.com/snail-plus/goutil/fsutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 var (
@@ -135,7 +135,7 @@ func main() {
 		tplBody = fsutil.MustReadFile(tplFile)
 	}
 
-	basePkg := "github.com/gookit/goutil"
+	basePkg := "github.com/snail-plus/goutil"
 
 	// collect functions
 	buf := collectPgkFunc(ms, basePkg)

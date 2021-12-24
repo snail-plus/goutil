@@ -5,14 +5,14 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/gookit/goutil/mathutil"
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/mathutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 var ErrInvalidType = errors.New("the input param type is invalid")
 
 // ToInt64s convert interface{}(allow: array,slice) to []int64
-func ToInt64s(arr interface{})(ret []int64, err error) {
+func ToInt64s(arr interface{}) (ret []int64, err error) {
 	rv := reflect.ValueOf(arr)
 	if rv.Kind() != reflect.Slice && rv.Kind() != reflect.Array {
 		err = ErrInvalidType
@@ -31,7 +31,7 @@ func ToInt64s(arr interface{})(ret []int64, err error) {
 }
 
 // MustToInt64s convert interface{}(allow: array,slice) to []int64
-func MustToInt64s(arr interface{}) []int64  {
+func MustToInt64s(arr interface{}) []int64 {
 	ret, _ := ToInt64s(arr)
 	return ret
 }
@@ -46,7 +46,7 @@ func SliceToInt64s(arr []interface{}) []int64 {
 }
 
 // ToStrings convert interface{}(allow: array,slice) to []string
-func ToStrings(arr interface{})(ret []string, err error) {
+func ToStrings(arr interface{}) (ret []string, err error) {
 	rv := reflect.ValueOf(arr)
 	if rv.Kind() != reflect.Slice && rv.Kind() != reflect.Array {
 		err = ErrInvalidType
@@ -65,7 +65,7 @@ func ToStrings(arr interface{})(ret []string, err error) {
 }
 
 // MustToStrings convert interface{}(allow: array,slice) to []string
-func MustToStrings(arr interface{}) []string  {
+func MustToStrings(arr interface{}) []string {
 	ret, _ := ToStrings(arr)
 	return ret
 }

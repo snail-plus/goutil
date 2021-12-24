@@ -3,7 +3,7 @@ package cmdline_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/cliutil/cmdline"
+	"github.com/snail-plus/goutil/cliutil/cmdline"
 	"github.com/stretchr/testify/assert"
 )
 

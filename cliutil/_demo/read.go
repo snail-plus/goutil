@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/gookit/goutil/cliutil"
+	"github.com/snail-plus/goutil/cliutil"
 )
 
 // go run ./_demo/read.go

@@ -1,8 +1,8 @@
 package maputil
 
 import (
-	"github.com/gookit/goutil/mathutil"
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/mathutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 // Data an map data type

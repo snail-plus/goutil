@@ -1,7 +1,7 @@
 package goutil
 
 import (
-	"github.com/gookit/goutil/jsonutil"
+	"github.com/snail-plus/goutil/jsonutil"
 )
 
 // Go is a basic promise implementation: it wraps calls a function in a goroutine

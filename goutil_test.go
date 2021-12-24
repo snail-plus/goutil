@@ -4,21 +4,21 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gookit/goutil"
+	"github.com/snail-plus/goutil"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestFuncName(t *testing.T) {
 	name := goutil.FuncName(goutil.PkgName)
-	assert.Equal(t, "github.com/gookit/goutil.PkgName", name)
+	assert.Equal(t, "github.com/snail-plus/goutil.PkgName", name)
 
 	name = goutil.FuncName(goutil.PanicIfErr)
-	assert.Equal(t, "github.com/gookit/goutil.PanicIfErr", name)
+	assert.Equal(t, "github.com/snail-plus/goutil.PanicIfErr", name)
 }
 
 func TestPkgName(t *testing.T) {
 	name := goutil.PkgName(goutil.FuncName(goutil.PanicIfErr))
-	assert.Equal(t, "github.com/gookit/goutil", name)
+	assert.Equal(t, "github.com/snail-plus/goutil", name)
 }
 
 func TestPanicIfErr(t *testing.T) {

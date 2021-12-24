@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gookit/goutil/dump"
-	"github.com/gookit/goutil/sysutil"
-	"github.com/gookit/goutil/testutil"
+	"github.com/snail-plus/goutil/dump"
+	"github.com/snail-plus/goutil/sysutil"
+	"github.com/snail-plus/goutil/testutil"
 	"github.com/stretchr/testify/assert"
 )
 

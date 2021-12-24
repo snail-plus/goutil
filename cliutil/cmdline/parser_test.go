@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gookit/goutil/cliutil/cmdline"
-	"github.com/gookit/goutil/dump"
+	"github.com/snail-plus/goutil/cliutil/cmdline"
+	"github.com/snail-plus/goutil/dump"
 	"github.com/stretchr/testify/assert"
 )
 

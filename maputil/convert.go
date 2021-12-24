@@ -3,7 +3,7 @@ package maputil
 import (
 	"strings"
 
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 // KeyToLower convert keys to lower case.

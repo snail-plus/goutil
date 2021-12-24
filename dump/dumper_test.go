@@ -77,7 +77,7 @@ func TestDump_Basic(t *testing.T) {
 
 	str := buffer.String()
 	str = color.ClearCode(str) // clear color codes.
-	assert.Contains(t, str, "github.com/gookit/goutil/dump.TestDump_Basic(dumper_test.go")
+	assert.Contains(t, str, "github.com/snail-plus/goutil/dump.TestDump_Basic(dumper_test.go")
 	assert.Contains(t, str, "float64(3.1415926)")
 	assert.Contains(t, str, `string("abc1234")`)
 
@@ -212,7 +212,7 @@ func TestDump_Map(t *testing.T) {
 		"key5": -34,
 		"key6": nil,
 		"key7": []int{23, 34},
-		"key8": map[string]interface{} {
+		"key8": map[string]interface{}{
 			"key8sub1": []int{23, 34},
 			"key8sub2": []string{"a", "b"},
 		},
@@ -238,7 +238,7 @@ func TestMap_Simpled(t *testing.T) {
 	P(m1, m2, m3)
 	/*
 		Output:
-		PRINT AT github.com/gookit/goutil/dump.TestMap_Simpled(dump_test.go:309)
+		PRINT AT github.com/snail-plus/goutil/dump.TestMap_Simpled(dump_test.go:309)
 		map[int]int {
 		  24: int(13),
 		  23: int(12),
@@ -264,7 +264,7 @@ func TestMap_Simpled(t *testing.T) {
 	}
 	Print(m4)
 	/*
-		PRINT AT github.com/gookit/goutil/dump.TestMap_Simpled(dump_test.go:335)
+		PRINT AT github.com/snail-plus/goutil/dump.TestMap_Simpled(dump_test.go:335)
 		map[string]interface {} {
 		  key4: float64(3.14),
 		  key5: int(-34),
@@ -356,7 +356,7 @@ func TestStruct_WithNested(t *testing.T) {
 	dumper.IndentChar = '.'
 	dumper.Println(s1)
 	// OUT:
-	// PRINT AT github.com/gookit/goutil/dump.TestStruct_WithNested(dump_test.go:223)
+	// PRINT AT github.com/snail-plus/goutil/dump.TestStruct_WithNested(dump_test.go:223)
 	// struct { dump.st0; Age int; Name string } {
 	//  st0: dump.st0 {
 	//    Sex: 2,
@@ -375,7 +375,7 @@ func TestStruct_WithNested(t *testing.T) {
 	dumper.Print(s2)
 
 	// Output:
-	// PRINT AT github.com/gookit/goutil/dump.TestStruct_WithNested(dump_test.go:257)
+	// PRINT AT github.com/snail-plus/goutil/dump.TestStruct_WithNested(dump_test.go:257)
 	// dump.st2 {
 	//  st1: dump.st1 {
 	//    st0: dump.st0 {
@@ -396,7 +396,7 @@ func TestStruct_WithNested(t *testing.T) {
 	dumper.Print(s3)
 
 	// Output:
-	// PRINT AT github.com/gookit/goutil/dump.TestStruct_WithNested(dump_test.go:278)
+	// PRINT AT github.com/snail-plus/goutil/dump.TestStruct_WithNested(dump_test.go:278)
 	// struct { dump.st1; Github string } {
 	//  st1: dump.st1 {
 	//    st0: dump.st0 {

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gookit/goutil/mathutil"
+	"github.com/snail-plus/goutil/mathutil"
 	"github.com/stretchr/testify/assert"
 )
 

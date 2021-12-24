@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gookit/goutil/mathutil"
+	"github.com/snail-plus/goutil/mathutil"
 )
 
 // IntsHas check the []int contains the given value

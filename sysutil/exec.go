@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"os/exec"
 
-	"github.com/gookit/goutil/cliutil/cmdline"
+	"github.com/snail-plus/goutil/cliutil/cmdline"
 )
 
 // QuickExec quick exec an simple command line

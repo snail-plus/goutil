@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gookit/goutil/fmtutil"
+	"github.com/snail-plus/goutil/fmtutil"
 	"github.com/stretchr/testify/assert"
 )
 

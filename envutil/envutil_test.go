@@ -3,7 +3,7 @@ package envutil
 import (
 	"testing"
 
-	"github.com/gookit/goutil/testutil"
+	"github.com/snail-plus/goutil/testutil"
 	"github.com/stretchr/testify/assert"
 )
 

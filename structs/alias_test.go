@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/gookit/goutil/structs"
+	"github.com/snail-plus/goutil/structs"
 	"github.com/stretchr/testify/assert"
 )
 

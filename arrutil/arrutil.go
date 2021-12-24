@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/gookit/goutil/mathutil"
+	"github.com/snail-plus/goutil/mathutil"
 )
 
 // Reverse string slice [site user info 0] -> [0 info user site]

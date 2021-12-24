@@ -2,13 +2,13 @@
 
 This is an go string operate util package.
 
-- Github: https://github.com/gookit/goutil/strutil
-- GoDoc: https://godoc.org/github.com/gookit/goutil/strutil
+- Github: https://github.com/snail-plus/goutil/strutil
+- GoDoc: https://godoc.org/github.com/snail-plus/goutil/strutil
 
 ## Install
 
 ```bash
-go get github.com/gookit/goutil/dump
+go get github.com/snail-plus/goutil/dump
 ```
 
 ## Usage

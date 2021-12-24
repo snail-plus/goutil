@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/gookit/color"
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 // Options for dump vars
@@ -173,16 +173,16 @@ func (d *Dumper) dump(vs ...interface{}) {
 }
 
 func (d *Dumper) printCaller(pc uintptr, file string, line int) {
-	// eg: github.com/gookit/goutil/dump.ExamplePrint
+	// eg: github.com/snail-plus/goutil/dump.ExamplePrint
 	fnName := runtime.FuncForPC(pc).Name()
 
 	lineS := strconv.Itoa(line)
 	nodes := []string{"PRINT AT "}
 
 	// eg:
-	// "PRINT AT github.com/gookit/goutil/dump.ExamplePrint(goutil/dump/dump_test.go:23)"
-	// "PRINT AT github.com/gookit/goutil/dump.ExamplePrint(dump_test.go:23)"
-	// "PRINT AT github.com/gookit/goutil/dump.ExamplePrint(:23)"
+	// "PRINT AT github.com/snail-plus/goutil/dump.ExamplePrint(goutil/dump/dump_test.go:23)"
+	// "PRINT AT github.com/snail-plus/goutil/dump.ExamplePrint(dump_test.go:23)"
+	// "PRINT AT github.com/snail-plus/goutil/dump.ExamplePrint(:23)"
 	for _, flag := range callerFlags {
 		// has flag
 		if d.ShowFlag&flag == 0 {

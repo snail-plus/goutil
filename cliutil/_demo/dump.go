@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/gookit/goutil/dump"
+	"github.com/snail-plus/goutil/dump"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"errors"
 	"syscall"
 
-	"github.com/gookit/goutil/sysutil/process"
+	"github.com/snail-plus/goutil/sysutil/process"
 )
 
 // Kill process by pid

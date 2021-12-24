@@ -9,8 +9,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gookit/goutil/cliutil"
-	"github.com/gookit/goutil/dump"
+	"github.com/snail-plus/goutil/cliutil"
+	"github.com/snail-plus/goutil/dump"
 )
 
 func main() {
@@ -29,7 +29,7 @@ func main() {
 output:
 
 ```text
-PRINT AT github.com/gookit/goutil/cliutil_test.TestParseLine(line_parser_test.go:30)
+PRINT AT github.com/snail-plus/goutil/cliutil_test.TestParseLine(line_parser_test.go:30)
 []string [ #len=5
   string("./app"), #len=5
   string("top"), #len=3

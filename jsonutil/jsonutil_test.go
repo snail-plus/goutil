@@ -3,7 +3,7 @@ package jsonutil_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/jsonutil"
+	"github.com/snail-plus/goutil/jsonutil"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -113,7 +113,7 @@ comments
 	str = jsonutil.StripComments(`{"name":"app"} // comments`)
 	is.Equal(`{"name":"app"}`, str)
 
-	// fix https://github.com/gookit/config/issues/2
+	// fix https://github.com/snail-plus/config/issues/2
 	str = jsonutil.StripComments(`{"name":"http://abc.com"} // comments`)
 	is.Equal(`{"name":"http://abc.com"}`, str)
 

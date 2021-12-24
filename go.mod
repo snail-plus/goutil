@@ -1,4 +1,4 @@
-module github.com/gookit/goutil
+module github.com/snail-plus/goutil
 
 go 1.13
 

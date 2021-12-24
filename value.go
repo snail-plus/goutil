@@ -3,8 +3,8 @@ package goutil
 import (
 	"fmt"
 
-	"github.com/gookit/goutil/mathutil"
-	"github.com/gookit/goutil/strutil"
+	"github.com/snail-plus/goutil/mathutil"
+	"github.com/snail-plus/goutil/strutil"
 )
 
 // Value data store

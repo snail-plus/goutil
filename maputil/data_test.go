@@ -3,8 +3,8 @@ package maputil_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/dump"
-	"github.com/gookit/goutil/maputil"
+	"github.com/snail-plus/goutil/dump"
+	"github.com/snail-plus/goutil/maputil"
 	"github.com/stretchr/testify/assert"
 )
 

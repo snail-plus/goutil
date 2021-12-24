@@ -2,8 +2,8 @@
 package cliutil
 
 import (
-	"github.com/gookit/goutil/cliutil/cmdline"
-	"github.com/gookit/goutil/sysutil"
+	"github.com/snail-plus/goutil/cliutil/cmdline"
+	"github.com/snail-plus/goutil/sysutil"
 )
 
 // LineBuild build command line string by given args.

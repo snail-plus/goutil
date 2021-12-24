@@ -3,7 +3,7 @@ package goutil_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil"
+	"github.com/snail-plus/goutil"
 	"github.com/stretchr/testify/assert"
 )
 

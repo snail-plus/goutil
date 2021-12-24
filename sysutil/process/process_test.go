@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gookit/goutil/sysutil/process"
+	"github.com/snail-plus/goutil/sysutil/process"
 	"github.com/stretchr/testify/assert"
 )
 

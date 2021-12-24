@@ -3,7 +3,7 @@ package fmtutil_test
 import (
 	"testing"
 
-	"github.com/gookit/goutil/fmtutil"
+	"github.com/snail-plus/goutil/fmtutil"
 	"github.com/stretchr/testify/assert"
 )
 
