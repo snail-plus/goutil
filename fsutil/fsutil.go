@@ -49,7 +49,7 @@ func ExpandPath(path string) string {
 }
 
 // Realpath parse and get
-func Realpath(path string) string  {
+func Realpath(path string) string {
 	// TODO
 	return path
 }
@@ -83,4 +83,9 @@ func ReaderMimeType(r io.Reader) (mime string) {
 	}
 
 	return http.DetectContentType(buf[:n])
+}
+
+func ReadString(filename string) (string, error) {
+	content, err := ioutil.ReadFile(filename)
+	return string(content), err
 }
