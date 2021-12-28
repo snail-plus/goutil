@@ -68,7 +68,7 @@ func FilterEmail(s string) string {
  *************************************************************/
 
 // SplitValid string to slice. will filter empty string node.
-func SplitValid(s, sep string) (ss []string) { return Split(s, sep)}
+func SplitValid(s, sep string) (ss []string) { return Split(s, sep) }
 
 // Split string to slice. will filter empty string node.
 func Split(s, sep string) (ss []string) {
@@ -85,7 +85,7 @@ func Split(s, sep string) (ss []string) {
 }
 
 // SplitNValid string to slice. will filter empty string node.
-func SplitNValid(s, sep string, n int) (ss []string) { return SplitN(s, sep, n)}
+func SplitNValid(s, sep string, n int) (ss []string) { return SplitN(s, sep, n) }
 
 // SplitN string to slice. will filter empty string node.
 func SplitN(s, sep string, n int) (ss []string) {
@@ -119,7 +119,6 @@ func SplitTrimmed(s, sep string) (ss []string) {
 	}
 	return
 }
-
 
 // SplitNTrimmed split string to slice.
 // will trim space for each node, but not filter empty
@@ -288,4 +287,47 @@ func RenderText(input string, data interface{}, fns template.FuncMap, isFile ...
 	}
 
 	return buf.String()
+}
+
+// 按照长度切分字符串
+func Chunks(s string, chunkSize int) []string {
+
+	if len(s) == 0 {
+
+		return nil
+
+	}
+
+	if chunkSize >= len(s) {
+
+		return []string{s}
+
+	}
+
+	var chunks = make([]string, 0, (len(s)-1)/chunkSize+1)
+
+	currentLen := 0
+
+	currentStart := 0
+
+	for i := range s {
+
+		if currentLen == chunkSize {
+
+			chunks = append(chunks, s[currentStart:i])
+
+			currentLen = 0
+
+			currentStart = i
+
+		}
+
+		currentLen++
+
+	}
+
+	chunks = append(chunks, s[currentStart:])
+
+	return chunks
+
 }
