@@ -5,6 +5,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/axgle/mahonia"
 	"strings"
 	"text/template"
 )
@@ -330,4 +331,13 @@ func Chunks(s string, chunkSize int) []string {
 
 	return chunks
 
+}
+
+// 编码字符集转换
+func Translate(src string, srcCode string, tagCode string) (string, error) {
+	srcCoder := mahonia.NewDecoder(srcCode)
+	srcResult := srcCoder.ConvertString(src)
+	tagCoder := mahonia.NewDecoder(tagCode)
+	_, cdata, err := tagCoder.Translate([]byte(srcResult), true)
+	return string(cdata), err
 }
