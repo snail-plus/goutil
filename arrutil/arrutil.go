@@ -57,3 +57,23 @@ func GetRandomOne(arr interface{}) interface{} {
 
 	return r
 }
+
+func Filter(arr []interface{}, fn func(interface{}) bool) []interface{} {
+	var target []interface{}
+	for _, item := range arr {
+		if fn(item) {
+			target = append(target, item)
+		}
+	}
+
+	return target
+}
+
+func Map(arr []interface{}, fn func(interface{}) interface{}) []interface{} {
+	var target []interface{}
+	for _, item := range arr {
+		target = append(target, fn(item))
+	}
+
+	return target
+}
