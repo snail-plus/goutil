@@ -77,3 +77,19 @@ func Map(arr []interface{}, fn func(interface{}) interface{}) []interface{} {
 
 	return target
 }
+
+func FlatMap(arr [][]interface{}, fn func(interface{}) interface{}) []interface{} {
+	var target []interface{}
+	for _, item := range arr {
+		for _, innerItem := range item {
+			var targetItem interface{}
+			if fn != nil {
+				targetItem = fn(innerItem)
+			} else {
+				targetItem = innerItem
+			}
+			target = append(target, targetItem)
+		}
+	}
+	return target
+}
