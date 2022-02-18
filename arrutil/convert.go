@@ -4,12 +4,23 @@ import (
 	"errors"
 	"reflect"
 	"strconv"
+	"strings"
 
 	"github.com/snail-plus/goutil/mathutil"
 	"github.com/snail-plus/goutil/strutil"
 )
 
 var ErrInvalidType = errors.New("the input param type is invalid")
+
+var (
+	// JoinStrings alias of strings.Join
+	JoinStrings = strings.Join
+)
+
+// StringsJoin alias of strings.Join
+func StringsJoin(ss []string, sep string) string {
+	return strings.Join(ss, sep)
+}
 
 // ToInt64s convert interface{}(allow: array,slice) to []int64
 func ToInt64s(arr interface{}) (ret []int64, err error) {
@@ -70,6 +81,15 @@ func MustToStrings(arr interface{}) []string {
 	return ret
 }
 
+// StringsToSlice convert []string to []interface{}
+func StringsToSlice(strings []string) []interface{} {
+	args := make([]interface{}, len(strings))
+	for i, s := range strings {
+		args[i] = s
+	}
+	return args
+}
+
 // SliceToStrings convert []interface{} to []string
 func SliceToStrings(arr []interface{}) []string {
 	ss := make([]string, len(arr))
@@ -77,6 +97,24 @@ func SliceToStrings(arr []interface{}) []string {
 		ss[i] = strutil.MustString(v)
 	}
 	return ss
+}
+
+// ToString convert []interface{} to string
+func ToString(arr []interface{}) string {
+	var b strings.Builder
+	for i, v := range arr {
+		if i > 0 {
+			b.WriteByte(',')
+		}
+		b.WriteString(strutil.MustString(v))
+	}
+
+	return b.String()
+}
+
+// SliceToString convert []interface{} to string
+func SliceToString(arr ...interface{}) string {
+	return ToString(arr)
 }
 
 // StringsToInts string slice to int slice

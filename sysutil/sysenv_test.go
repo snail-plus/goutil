@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/snail-plus/goutil/dump"
 	"github.com/snail-plus/goutil/sysutil"
 	"github.com/snail-plus/goutil/testutil"
+
 	"github.com/stretchr/testify/assert"
 )
 
@@ -93,22 +93,4 @@ func TestShellExec(t *testing.T) {
 	ret, err = sysutil.ShellExec("echo OK", "bash")
 	assert.NoError(t, err)
 	assert.Equal(t, "OK", strings.TrimSpace(ret))
-}
-
-func TestUserDir(t *testing.T) {
-	dir := sysutil.UserHomeDir()
-	assert.NotEmpty(t, dir)
-	dump.P(dir)
-
-	dir = sysutil.UserDir("sub-path")
-	assert.Contains(t, dir, "/sub-path")
-	dump.P(dir)
-
-	dir = sysutil.UserCacheDir("my-logs")
-	assert.Contains(t, dir, ".cache/my-logs")
-	dump.P(dir)
-
-	dir = sysutil.UserConfigDir("my-conf")
-	assert.Contains(t, dir, ".config/my-conf")
-	dump.P(dir)
 }
