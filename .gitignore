@@ -17,3 +17,4 @@
 *.out
 *.cov
 .DS_Store
+.github/workflows
